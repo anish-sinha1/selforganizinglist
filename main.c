@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include "selforglist/list.h"
+#include "selforglist/models.h"
+
+int main() {
+    List *list1 = new_list(organize_mtf);
+    list1->insert(list1, 1);
+    list1->insert(list1, 2);
+    list1->insert(list1, 3);
+    list1->insert(list1, 4);
+    list1->search(list1, 4);
+    list1->print(list1);
+    list1->search(list1, 2);
+    printf("\n");
+    list1->print(list1);
+    printf("\n");
+    list1->insert(list1, 5);
+    list1->print(list1);
+    list1->search(list1, 5);
+    printf("\n");
+    list1->print(list1);
+    list1->search(list1, 3);
+    list1->search(list1, 3);
+    printf("\n");
+    list1->print(list1);
+    printf("\n------------------------------------------------------------------------------------------\n");
+    List *list2 = new_list(organize_transpose);
+    list2->insert(list2, 1);
+    list2->insert(list2, 2);
+    list2->insert(list2, 3);
+    list2->insert(list2, 4);
+    list2->print(list2);
+    printf("\n");
+    list2->search(list2, 4);
+    list2->print(list2);
+    list2->search(list2, 4);
+    printf("\n");
+    list2->print(list2);
+    list2->search(list2, 4);
+    printf("\n");
+    list2->print(list2);
+    list2->search(list2, 4);
+    printf("\n");
+    list2->print(list2);
+    printf("\n");
+    List *list3 = new_list(organize_count);
+    printf("\n------------------------------------------------------------------------------------------\n");
+    list3->insert(list3, 1);
+    list3->insert(list3, 2);
+    list3->insert(list3, 3);
+    list3->insert(list3, 4);
+    list3->print(list3);
+    printf("\n");
+    list3->search(list3, 4);
+    list3->print(list3);
+    list3->search(list3, 2);
+    printf("\n");
+    list3->print(list3);
+    list3->search(list3, 4);
+    printf("\n");
+    list3->print(list3);
+    printf("\n");
+    list3->search(list3, 3);
+    list3->print(list3);
+    printf("\n");
+    list3->insert(list3, 5);
+    list3->search(list3, 5);
+    list3->print(list3);
+    return 0;
+}
